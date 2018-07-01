@@ -1,4 +1,5 @@
 <?php
+$message = '';
 
 if(!empty($_POST['uname']) && !empty($_POST['psw'])){
     $uname = $_POST['uname'];
@@ -6,7 +7,14 @@ if(!empty($_POST['uname']) && !empty($_POST['psw'])){
     
     // SQL de vérification du compte
     include './model/search_user.php';
+    
+    if(is_null($user)){
+        $message = "Le nom d'utilisateur et le mot de passe que vous avez entrés ne correspondent pas à ceux présents dans nos fichiers. Veuillez vérifier et réessayer.";
+    }
+    else{
+        header('Location: http://localhost/SiteFilRouge/index.php?page=loadtopology');
+    }
 }
 
-include './view/login/login.html';
+include './view/login/login.php';
 

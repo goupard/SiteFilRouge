@@ -8,5 +8,4 @@ R::setup('mysql:host=localhost;dbname=fil_rouge','root','');
 $user = R::findOne(
     'user', ' username = ? and password = ?', [ $uname , $psw] );
 
-echo $user;
 

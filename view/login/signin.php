@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-    <form id="formulaire" name="Login :" action="" method="POST">
+    <form id="formulaire" name="signin" action="" method="POST">
 
 
   <div class="container">
@@ -9,11 +9,9 @@
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Confirmed Password" name="psw2" required>
+ 
         
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
+    <button type="submit">Sign In</button>
   </div>
  </form>
-
