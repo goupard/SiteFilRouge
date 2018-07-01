@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 
-<body>
-    <form id="fForm" name="fForm" action="" method="POST">
-	<!-- données utilisateur -->
-	<input type="text" id="iNom" name="iNom" /><br/>
-	<input type="text" id="iPrenom" name="iPrenom" /><br/>
-	<input type="text" id="iVisa" name="iVisa" /><p/>
-	<input type="submit" value="envoyer" /> 
-    </form>
-</body>
+    <form id="formulaire" name="Login :" action="" method="POST">
+
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+        
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+ </form>
+

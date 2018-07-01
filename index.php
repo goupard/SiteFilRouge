@@ -1,24 +1,18 @@
-<html>
-    <head>
-        <title>RedFire</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
-    <body>
-<?php
-# INIT
-  @session_start();
+﻿<?php
 
+session_start();
 
+include './view/header.html';
 
- 
+if (!empty($_GET['page']) && is_file('controleur/'.$_GET['page'].'.php'))
+{
+        include 'controller/'.$_GET['page'].'.php';
+}
+else
+{
+        include 'controller/loginController.php';
+}
+
+include './view/footer.html';
 ?>
-    
-
-        <div class="footer"> 
-            <p>Site du projet Fil Rouge de DUPORTAIL/GOUPIL/ROSE - 2018</p>
-        </div>
-    </body>
-</html>
 
