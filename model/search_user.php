@@ -5,10 +5,8 @@ require_once './ressource/rb-mysql.php';
 
 R::setup('mysql:host=localhost;dbname=fil_rouge','root','');
 
-$user = R::dispense( 'user' );
+$user = R::findOne(
+    'user', ' username = ? and password = ?', [ $uname , $psw] );
 
-$user->username = $uname;
-$user->password = $psw;
-$user->date_creation = '';
+echo $user;
 
-$id = R::store( $user );
