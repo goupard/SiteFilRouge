@@ -12,7 +12,12 @@ if(!empty($_POST['uname']) && !empty($_POST['psw'])){
         $message = "Le nom d'utilisateur et le mot de passe que vous avez entrés ne correspondent pas à ceux présents dans nos fichiers. Veuillez vérifier et réessayer.";
     }
     else{
-        header('Location: http://localhost/SiteFilRouge/index.php?page=loadtopology');
+        if($user->admin == true){
+            header('Location: http://localhost/SiteFilRouge/index.php?page=loadtopology');
+        }
+        else{
+            header('Location: http://localhost/SiteFilRouge/index.php?page=accessdn');
+        }  
     }
 }
 

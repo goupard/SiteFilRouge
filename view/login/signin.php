@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-    <form id="formulaire" name="signin" action="" method="POST">
+<form id="formulaire" name="signin" action="" method="POST">
 
 
   <div class="container">

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 
-    <form id="formulaire" name="login" action="" method="POST">
-
-
+<form id="formulaire" name="login" action="" method="POST">
   <div class="container">
     <label for="uname"><b>Username</b></label>
     <input type="text" placeholder="Enter Username" name="uname" required>
